@@ -1,0 +1,57 @@
+:root{
+  --bg: #141a30;
+  --bg-elev: #1d2544;
+  --bg-elev-2: #262f57;
+  --gold: #c9a227;
+  --gold-bright: #f0cf6d;
+  --teal: #34a89c;
+  --rose: #c1554a;
+  --ink: #f3efe4;
+  --ink-dim: #a9a6bd;
+  --line: rgba(243,239,228,0.09);
+}
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  min-height:100vh;
+  background: radial-gradient(1200px 800px at 50% -10%, #1c2448 0%, #141a30 55%, #10142a 100%);
+  color: var(--ink);
+  font-family: 'Tajawal', sans-serif;
+  display:flex; align-items:center; justify-content:center;
+  padding: 24px;
+}
+.card{
+  width:100%; max-width:440px;
+  background: var(--bg-elev);
+  border:1px solid var(--line);
+  border-radius: 18px;
+  padding: 32px 26px;
+  text-align:center;
+}
+h1{
+  font-family:'Cairo', sans-serif; font-weight:800; font-size:22px; margin: 0 0 6px;
+}
+.sub{ color:var(--ink-dim); font-size:14px; margin-bottom:22px; line-height:1.7; }
+.price{ font-family:'Cairo',sans-serif; font-weight:800; font-size:38px; color:var(--gold-bright); margin: 8px 0 4px;}
+.price span{ font-size:15px; color:var(--ink-dim); font-weight:500; }
+button, .btn{
+  display:inline-block; width:100%; background: var(--gold); color:#1a1608; border:none;
+  border-radius: 12px; padding:13px 18px; font-family:'Cairo',sans-serif; font-weight:700; font-size:15.5px;
+  cursor:pointer; text-decoration:none; margin-top:10px; transition:.15s;
+}
+button:disabled{ opacity:.5; cursor:not-allowed; }
+button:hover:not(:disabled), .btn:hover{ background: var(--gold-bright); }
+input[type=text], input[type=password]{
+  width:100%; background: var(--bg-elev-2); border:1px solid var(--line); border-radius:12px;
+  padding:13px 14px; color:var(--ink); font-family:'Tajawal',sans-serif; font-size:16px; text-align:center;
+  letter-spacing: 4px; outline:none; margin-bottom:10px;
+}
+.code-box{
+  font-family:'Cairo',sans-serif; font-weight:800; font-size:36px; letter-spacing:8px;
+  background: var(--bg-elev-2); border:1px dashed var(--gold); border-radius:14px;
+  padding: 18px; color: var(--gold-bright); margin: 16px 0;
+}
+.msg-error{ color: var(--rose); font-size:13.5px; margin-top:8px; }
+.msg-ok{ color: var(--teal); font-size:13.5px; margin-top:8px; }
+.footer-note{ color: var(--ink-dim); font-size:11.5px; margin-top:20px; line-height:1.6; }
+a{ color: var(--gold-bright); }
